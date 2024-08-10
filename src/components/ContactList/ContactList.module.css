@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 10px;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.text {
+  font-size: 15px;
+  font-weight: 500;
+  margin-right: 15px;
+}
+.btn {
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(6, 119, 190);
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+}
+
+.wrapperText {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

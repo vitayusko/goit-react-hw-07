@@ -1,13 +1,33 @@
 import axios from "axios";
-import { setErrorStatus } from "./contactsSlice";
+import {
+  deleteContact,
+  setErrorStatus,
+  setLoadingStatus,
+} from "./contactsSlice";
 
 axios.defaults.baseURL = "https://66b728637f7b1c6d8f1b13d8.mockapi.io/";
 
 export const fetchContactsThunk = () => async (dispatch) => {
   try {
-    const responce = await axios.get("contacts");
-    console.log(responce.data);
+    dispatch(setLoadingStatus(true));
+    const response = await axios.get("contacts");
+    console.log(response.data);
+    dispatch(fetchData(response.data));
   } catch (error) {
     dispatch(setErrorStatus(true));
+  } finally {
+    dispatch(setLoadingStatus(false));
+  }
+};
+
+export const deleteContactThunk = (id) => async (dispatch) => {
+  try {
+    dispatch(setLoadingStatus(true));
+    await axios.delete(`contacts/${id}`);
+  } catch (error) {
+    dispatch(setErrorStatus(true));
+    console.error("Error deleting contact:", error);
+  } finally {
+    dispatch(setLoadingStatus(false));
   }
 };

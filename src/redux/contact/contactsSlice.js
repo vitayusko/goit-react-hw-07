@@ -17,6 +17,7 @@ const slice = createSlice({
       state.error = action.payload;
     },
     fetchData: (state, action) => {
+      console.log("Data in fetchData reducer:", action.payload);
       state.items = action.payload;
     },
 

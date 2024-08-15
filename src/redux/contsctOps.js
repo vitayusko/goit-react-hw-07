@@ -38,28 +38,3 @@ export const addContactThunk = createAsyncThunk(
     }
   }
 );
-
-// export const fetchContactsThunk = () => async (dispatch) => {
-//   try {
-//     dispatch(setLoadingStatus(true));
-//     const response = await axios.get("contacts");
-//     console.log(response.data);
-//     dispatch(fetchData(response.data));
-//   } catch (error) {
-//     dispatch(setErrorStatus(true));
-//   } finally {
-//     dispatch(setLoadingStatus(false));
-//   }
-// };
-
-// export const deleteContactThunk = (id) => async (dispatch) => {
-//   try {
-//     dispatch(setLoadingStatus(true));
-//     await axios.delete(`contacts/${id}`);
-//   } catch (error) {
-//     dispatch(setErrorStatus(true));
-//     console.error("Error deleting contact:", error);
-//   } finally {
-//     dispatch(setLoadingStatus(false));
-//   }
-// };

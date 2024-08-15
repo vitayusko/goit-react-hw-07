@@ -4,7 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useDispatch } from "react-redux";
 import { nanoid } from "@reduxjs/toolkit";
 // import { addContact } from "../../redux/contact/contactsSlice";
-import { addContactThunk } from "../../redux/contact/contactsOps";
+import { addContactThunk } from "../../redux/contactsOps";
 
 const ContactForm = () => {
   const dispatch = useDispatch();

@@ -2,7 +2,7 @@ import React from "react";
 import { FaUser, FaPhoneAlt } from "react-icons/fa";
 import s from "./ContactList.module.css";
 import { useDispatch } from "react-redux";
-import { deleteContactThunk } from "../../redux/contactOps";
+import { deleteContactThunk } from "../../redux/contactsOps";
 // import { deleteContact } from "../../redux/contact/contactsSlice";
 
 const Contact = ({ id, name, number }) => {
